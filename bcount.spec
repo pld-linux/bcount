@@ -1,11 +1,12 @@
 Summary:	Bytes counter
 Summary(pl):	Licznik bajtów
 Name:		bcount
-Version:	1.0test2
-Release:	0.1
+Version:	1.0
+%define		_test	test2
+Release:	0.%{_test}.2
 License:	GPL
 Group:		Networking/Utilities		
-Source0:	http://www.deth.org.pl/~alex/bcount/%{name}-%{version}.tar.gz
+Source0:	http://www.deth.org.pl/~alex/bcount/%{name}-%{version}%{_test}.tar.gz
 # Source0-md5:	af92076cb4dbb870b991b677d0ad3bc2
 Patch0:		%{name}-ncurses.patch
 URL:		http://www.deth.org.pl/~alex/bcount/
@@ -21,20 +22,20 @@ Bcount jest licznikiem pokazuj±cym informacjê o bajtach i pakietach
 przechodz±cych przez interfejs sieciowy.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}%{_test}
 %patch0 -p1
 
 %build
-%configure
+%configure 
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{_sbindir},/var/log}
+install -d $RPM_BUILD_ROOT{%{_sbindir},%{_var}/log}
 install bcount $RPM_BUILD_ROOT%{_sbindir}
 
-:> $RPM_BUILD_ROOT/var/log/bcount.log
+:> $RPM_BUILD_ROOT%{_var}/log/bcount.log
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -44,4 +45,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README TODO README.protocol
 %doc README.log README.ethx README.fuckyou
 %attr(755,root,root) %{_sbindir}/*
-%attr(640,root,root) %ghost /var/log/bcount.log
+%attr(640,root,root) %ghost %{_var}/log/bcount.log
