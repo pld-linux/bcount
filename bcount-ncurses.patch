@@ -1,0 +1,36 @@
+diff -urN bcount-1.0test2.orig/src/bclient.h bcount-1.0test2/src/bclient.h
+--- bcount-1.0test2.orig/src/bclient.h	2003-06-01 19:23:43.000000000 +0200
++++ bcount-1.0test2/src/bclient.h	2004-05-26 19:18:37.011309584 +0200
+@@ -26,7 +26,7 @@
+ 
+ #include <sys/types.h>
+ #include <arpa/inet.h>
+-#include <curses.h>
++#include <ncurses/curses.h>
+ #include <getopt.h>
+ #include <netdb.h>
+ #include <sys/time.h>
+diff -urN bcount-1.0test2.orig/src/bcount.h bcount-1.0test2/src/bcount.h
+--- bcount-1.0test2.orig/src/bcount.h	2003-08-07 23:20:10.000000000 +0200
++++ bcount-1.0test2/src/bcount.h	2004-05-26 19:18:50.843206816 +0200
+@@ -26,7 +26,7 @@
+ 
+ 
+ #include <sys/stat.h>
+-#include <curses.h>
++#include <ncurses/curses.h>
+ #include <fcntl.h>
+ #include <sys/time.h>
+ #include <pwd.h>
+diff -urN bcount-1.0test2.orig/src/bserver.h bcount-1.0test2/src/bserver.h
+--- bcount-1.0test2.orig/src/bserver.h	2003-06-01 19:23:51.000000000 +0200
++++ bcount-1.0test2/src/bserver.h	2004-05-26 19:18:57.368214864 +0200
+@@ -26,7 +26,7 @@
+ 
+ 
+ #include <sys/wait.h>
+-#include <curses.h>
++#include <ncurses/curses.h>
+ #include <fcntl.h>
+ #include "programs_version.h"
+ #include "includes.h"
