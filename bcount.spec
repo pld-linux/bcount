@@ -1,11 +1,11 @@
+%define		_test	test2
 Summary:	Bytes counter
 Summary(pl):	Licznik bajtów
 Name:		bcount
 Version:	1.0
-%define		_test	test2
 Release:	0.%{_test}.2
 License:	GPL
-Group:		Networking/Utilities		
+Group:		Networking/Utilities
 Source0:	http://www.deth.org.pl/~alex/bcount/%{name}-%{version}%{_test}.tar.gz
 # Source0-md5:	af92076cb4dbb870b991b677d0ad3bc2
 Patch0:		%{name}-ncurses.patch
@@ -26,7 +26,9 @@ przechodz±cych przez interfejs sieciowy.
 %patch0 -p1
 
 %build
-%configure 
+%configure \
+	 \
+
 %{__make}
 
 %install
