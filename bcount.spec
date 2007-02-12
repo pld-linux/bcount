@@ -1,6 +1,6 @@
 %define		_test	test2
 Summary:	Bytes counter
-Summary(pl):	Licznik bajtów
+Summary(pl.UTF-8):   Licznik bajtÃ³w
 Name:		bcount
 Version:	1.0
 Release:	0.%{_test}.2
@@ -17,9 +17,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Bytes Counter displays detailed information about the number of bytes
 and packets that have been transferred over a network interface.
 
-%description -l pl
-Bcount jest licznikiem pokazuj±cym informacjê o bajtach i pakietach
-przechodz±cych przez interfejs sieciowy.
+%description -l pl.UTF-8
+Bcount jest licznikiem pokazujÄ…cym informacjÄ™ o bajtach i pakietach
+przechodzÄ…cych przez interfejs sieciowy.
 
 %prep
 %setup -q -n %{name}-%{version}%{_test}
