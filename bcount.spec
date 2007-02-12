@@ -1,6 +1,6 @@
 %define		_test	test2
 Summary:	Bytes counter
-Summary(pl.UTF-8):   Licznik bajtów
+Summary(pl.UTF-8):	Licznik bajtów
 Name:		bcount
 Version:	1.0
 Release:	0.%{_test}.2
